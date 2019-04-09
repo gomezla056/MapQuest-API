@@ -7,16 +7,15 @@ def number_of_locations() -> list:
         locations = int(input("Error: Please put a number 2 or 3.\nLocations: "))
     addresses = []
     for local in range(locations):
-        local = input("Location " + str(local + 1) + ": ")
+        local = input("Address of Location " + str(local + 1) + ": ")
         addresses.append(local)
     return addresses
-
 
 
 def number_of_outputs() -> list:
     '''This function defines how many outputs the user wishes to use (up to five)
     and selects which outputs to print out in the user's specified order'''
-    print("Optional arguments to use: STEPS, LATLONG, TOTALTIME, TOTALDISTANCE\n")
+    print("\nOptional arguments to use: STEPS, LATLONG, TOTALTIME, TOTALDISTANCE")
     outputs = int(input("Choose the number of optional arguments to use (0 - 4): "))
     while outputs < 0 or outputs > 4:
         outputs = int(input("Error: Please put a number between 0 and 4.\nOptional arguments: "))
